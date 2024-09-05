@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
+import "./Weather.css";
 
 export default function Weather() {
-  function handleResponse(response) {
-    alert(`the weather is New York is ${response.data.main.temp}°C`);
+  const [city, setCity] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
   }
-  let apiKey = "50c2acd53349fabd54f52b93c8650d37";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(handleResponse);
-
   return (
-    <ReactAnimatedWeather
-      icon="CLEAR_DAY"
-      color="white"
-      size={100}
-      animate={true}
-    />
+    <div className="Weather">
+      <form onSubmit={handleSubmit}>
+        <input type="search" placeholder="Type your city" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
   );
 }
