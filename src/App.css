@@ -1,5 +1,25 @@
+.Weather-app {
+  background: white;
+  max-width: 400px;
+  margin: 45px auto;
+  box-shadow: 0 30px 40px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.Footer {
+  border-top: 1px solid #d6c6ff;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(128, 146, 215);
+}
+
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
 }
 
 .App-logo {

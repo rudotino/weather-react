@@ -31,13 +31,16 @@ export default function Weather() {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="Search">
       <input
         type="search"
         placeholder="Type your city.."
         onChange={updateCity}
+        class="search-form-input"
       />
-      <button type="submit">Search</button>
+      <button type="submit" class="search-form-button">
+        Search
+      </button>
     </form>
   );
 
@@ -45,12 +48,19 @@ export default function Weather() {
     return (
       <div>
         {form}
-        <ul>
-          <li>Temperature: {Math.round(result.temperature)} °C</li>
-          <li>Description: {result.description}</li>
-          <li>Humidity: {result.humidity}%</li>
-          <li>Wind: {result.wind}km/h</li>
-        </ul>
+        <div>
+          <div>
+            Temperature in {city} is
+            <br />{" "}
+            <span class="weather-app-temperature">
+              {Math.round(result.temperature)}
+            </span>
+            °C
+          </div>
+          <p>Description: {result.description}</p>
+          <p>Humidity: {result.humidity}%</p>
+          <p>Wind: {result.wind}km/h</p>
+        </div>
       </div>
     );
   } else {
