@@ -50,7 +50,7 @@ export default function Weather() {
         {form}
         <div>
           <div>
-            Temperature in {city} is
+            Temperature
             <br />{" "}
             <span class="weather-app-temperature">
               {Math.round(result.temperature)}

@@ -6,7 +6,7 @@ export default function Header() {
     <ReactAnimatedWeather
       icon="CLEAR_DAY"
       color="orange"
-      size={70}
+      size={80}
       animate={true}
     />
   );
